@@ -1,0 +1,422 @@
+:root {
+    --main: #2C3855;
+    --main-dark: #435681;
+    --text-color-dark: #333333;
+    --text-color-light: #767268;
+    --extra-color-light: #F3F4F6;
+    --white: #FFFFFF;
+
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.header {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: auto;
+    padding: 3rem 1rem;
+
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: sticky;
+}
+
+
+.header .logo h1 {
+    color: var(--main);
+}
+
+.header .navbar ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.header .navbar ul li {
+    list-style-type: none;
+}
+
+.header .navbar ul li a{
+    font-size: 1.2rem;
+    color: var(--main);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.header .navbar ul li a:hover {
+    color: var(--main-dark);
+    transition: 0.2s ease-in-out;
+}
+
+.header .navbar ul li a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.2rem;
+    border-bottom: 0.1rem solid var(--main-dark);
+    transform: scaleX(0);
+}
+
+.header .navbar ul li a:hover::after {
+    transform: scaleX(0.5);
+    transition: 0.3s ease-in-out;
+}
+
+
+.header .login a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    padding: 0.6rem;
+    background-color: var(--main);
+    border-radius: 10px;
+}
+
+
+#menu {
+    display: none;
+}
+
+.home {
+    max-width: 1200px;
+    margin: auto;
+    padding: 3rem 1rem;
+    height: 500px;
+    border-radius: 15px;
+
+    background: url('/img/bg-1.jpg');
+    background-size: cover;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+
+    box-shadow: 1px 4px 6px grey;
+}
+
+.home .hero{
+    padding: 2rem;
+    color: var(--extra-color-light);
+}
+
+.home .hero h1 {
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+}
+
+.home .hero h2 {
+    letter-spacing: 0.3rem;
+}
+.home .hero .text {
+    color: var(--main-dark);
+}
+
+/* Booking */
+
+.booking {
+    max-width: 1200px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 3rem 1rem;
+}
+
+.booking .judul-booking{
+    text-align: center;
+}
+
+.booking .judul-booking h1 {
+    color: var(--main);
+}
+
+.booking .card {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.booking .card .card-detail {
+    height: 420px;
+    width:350px;
+    overflow: hidden;
+
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 1px 4px 6px grey;
+}
+
+.booking .card .card-detail:hover {
+    transform: scale(1.05);
+}
+
+.booking .card .card-detail > a {
+    padding: 0.6rem;
+    text-decoration: none;
+    color: var(--extra-color-light);
+    background-color: var(--main);
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.booking .card .card-detail > a:hover {
+    color: var(--main);
+    background-color: var(--text-color-light);
+    transition: 0.2s ease-in-out;
+}
+
+.booking .card .card-detail .deskripsi {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.booking .card .card-detail .deskripsi h3 {
+    color: var(--main-dark);
+    font-size: 1rem;
+}
+
+.booking .card .card-detail img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.booking .lihat {
+    margin-top: 3rem;
+}
+.booking .lihat > a{
+    text-decoration: none;
+    padding: 1rem;
+    color: var(--extra-color-light);
+    background-color: var(--main);
+    border-radius: 999px;
+}
+
+/* Services */
+
+.services {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+
+    margin: auto;
+    padding: 3rem 1rem;
+
+    box-shadow: 1px 3px 5px var(--text-color-light);
+    border-radius: 25px;
+}
+
+.services .main-services h2 {
+    font-size: 2.5rem;
+    color: var(--main);
+}
+
+
+.services .main-services ul li {
+    display: block;
+    list-style-type: none;
+    margin: 1.2rem;
+    font-size: 2rem;
+    color: var(--main);
+}
+
+
+
+.services .services-img img {
+    width: 600px;
+    border-radius: 50px 20px 80px 10px;
+}
+
+/* Contact */
+
+.footer {
+    /* max-width: 1200px; */
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 3rem 10rem;
+    margin: auto;
+    background-color: var(--main);
+}
+
+.footer .copy {
+    color: var(--extra-color-light);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+
+.footer .sosmed ul {
+    gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .sosmed ul li {
+    list-style-type: none;
+}
+
+.footer .sosmed ul li a {
+    text-decoration: none;
+    color: var(--extra-color-light);
+    font-size: 2rem;
+}
+
+/* Media Queries */
+
+/* Laptop */
+/* @media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+} */
+
+/* Tabler */
+
+@media (max-width: 768px) {
+    html {
+        font-size: 65%;
+    }
+
+    body {
+        padding: 3rem 1rem;
+    }
+
+
+    #menu {
+        display: inline-block;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: var(--main);
+        width: 30rem;
+        height: 100vh;
+
+        transition: 0.3s ease-in-out;
+    }
+
+    .header .navbar.active {
+        right: 0;
+    }
+
+    .header .navbar ul {
+        flex-direction: column;
+    }
+
+    .header .navbar ul li a{ 
+        color: var(--extra-color-light);
+        display: block;
+        margin: 0.5rem;
+        padding: 0.2rem;
+        font-size: 1.4rem;
+    }
+
+    .header .navbar ul li a::after {
+        transform-origin: 0 0;
+    }
+
+    .header .navbar ul li a:hover::after {
+        transform: scaleX(0.3);
+    }
+
+    .home {
+        height: 90%;
+    }
+
+    .booking .card{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+
+    .services {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .services .services-img img {
+        width: 400px;
+    }
+
+    .services .main-services ul li {
+        display: inline;
+    }
+
+    .footer {
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+
+/* HandPhone */
+
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+
+    body {
+        padding: 2rem 1rem;
+    }
+
+    .home {
+        height: 70%;
+    }
+
+    .booking .card{
+        flex-direction: column;
+    }
+
+    .booking .card .card-detail {
+        width: 300px;
+        height: 300px;
+    }
+
+    .booking .card .card-detail .deskripsi {
+        gap: 0.5rem;
+    }
+
+    .services {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .services .services-img img {
+        width: 300px;
+    }
+
+    .services .main-services ul li {
+        display: inline;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+}
