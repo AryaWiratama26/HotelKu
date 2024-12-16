@@ -282,6 +282,72 @@ body {
     font-size: 2rem;
 }
 
+
+/* Room Detail */
+
+.room {
+    width: 100%;
+    padding: 3rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    
+}
+
+.room .detail-img img {
+    width: 250px;
+}
+
+.room .detail-img{
+    box-shadow: 8px 8px 8px grey;
+    flex: 4;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.room .room-detail {
+    background-color: var(--extra-color-light);
+    padding: 1.5rem;
+    flex: 7;
+    text-align: center;
+    box-shadow: 8px 8px 8px grey;
+}
+
+.room .room-detail h1,
+.room .room-detail p {
+    color: var(--main);
+}
+
+.room .room-detail .bintang {
+    color: yellow;
+    font-size: 2rem;
+}
+
+.room .room-detail iframe {
+    width: 90%;
+    margin-bottom: 2rem;
+}
+
+.room .room-detail a {
+    padding: 0.5rem;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: 600;
+    background-color: var(--main);
+    border-radius: 15px;
+}
+
+.room .room-detail a:hover {
+    color: var(--main);
+    background-color: var(--white);
+    transition: .4s ease-in-out;
+}
+
+
+
 /* Media Queries */
 
 /* Laptop */
