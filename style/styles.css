@@ -306,6 +306,7 @@ body {
 }
 
 .room .detail-img{
+    cursor: pointer;
     box-shadow: 8px 8px 8px grey;
     flex: 4;
     display: grid;
@@ -373,6 +374,182 @@ body {
     visibility: visible;
     opacity: 1;
     transition: 0.2s ease-in-out;
+}
+
+/* Payment */
+
+
+.payment {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 900px;
+    margin: 50px auto;
+    background: var(--main);
+    box-shadow: 0 4px 6px grey;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.left {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid var(--text-color-light);
+}
+
+.hotel-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px 0 4px 6px grey;
+}
+
+.left h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--white);
+    margin-top: 10px;
+    text-align: center;
+}
+
+.right {
+    flex: 1;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 16px;
+    color: var(--extra-color-light);
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+    border-color: var(--extra-color-light);
+}
+
+h2#total-Harga {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--extra-color-light);
+    text-align: center;
+    margin-top: 20px;
+}
+
+button#bayar {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--main-dark);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#bayar:hover {
+    background-color: var(--text-color-light);
+}
+
+
+/* Transaksi */
+
+
+.final {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto; 
+    background: var(--main);
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px grey;
+    text-align: center;
+    width: 300px;
+}
+
+.judul {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--extra-color-light);
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--extra-color-light);
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+}
+
+button {
+    background: var(--text-color-light);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: var(--extra-color-light);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button > a {
+    text-decoration: none;
+    color: var(--extra-color-light);
+    font-weight: 600;
+}
+
+button:hover {
+    background: var(--text-color-dark);
+}
+
+#keterangan {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .payment {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .left, .right {
+        border: none;
+    }
+
+    .right {
+        padding-top: 0;
+    }
 }
 
 
@@ -537,3 +714,5 @@ body {
     }
 
 }
+
+
