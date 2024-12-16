@@ -12,6 +12,22 @@ ScrollReveal().reveal(".room .detail-img", {
     reset: true,
 })
 
+const navbar = document.querySelector('.navbar');
+const menu = document.getElementById('menu');
+
+
+// Navbar
+menu.addEventListener("click", (event) => {
+    navbar.classList.toggle('active');
+    event.preventDefault();
+});
+
+document.addEventListener("click", (event) => {
+    if (!menu.contains(event.target) && !navbar.contains(event.target)) {
+        navbar.classList.remove('active');
+    }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     const roomDetailImgs = document.querySelectorAll(".imgClick");
     const room = document.querySelector(".room"); 
@@ -35,6 +51,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
 });
+
+document.querySelector('a[href="payment.html"]').addEventListener('click', (event) => {
+    const product = {
+        name: 'Swiss Berlin',
+        price: '8000000',
+    };
+
+    console.log(product);
+    localStorage.setItem('selectedProduct', JSON.stringify(product));
+});
+
+
 
 
 
