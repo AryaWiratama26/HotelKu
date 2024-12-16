@@ -436,6 +436,19 @@ body {
         text-align: center;
         flex-direction: column;
     }
+
+    .room {
+        flex-direction: column;
+    }
+
+    .room .detail-img img{
+        width: 200px;
+    }
+
+    .room .detail-img {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 
@@ -483,6 +496,15 @@ body {
 
     .footer {
         flex-direction: column;
+    }
+
+    .room .detail-img img{
+        width: 130px;
+    }
+
+    .room .detail-img {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 
 }
