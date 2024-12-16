@@ -295,6 +295,12 @@ body {
     
 }
 
+.room.active {
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
 .room .detail-img img {
     width: 250px;
 }
@@ -344,6 +350,29 @@ body {
     color: var(--main);
     background-color: var(--white);
     transition: .4s ease-in-out;
+}
+
+#popup img{
+    width: 100%;
+}
+#popup {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0,0,0,.30);
+    background: var(--white);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+#popup.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.2s ease-in-out;
 }
 
 
